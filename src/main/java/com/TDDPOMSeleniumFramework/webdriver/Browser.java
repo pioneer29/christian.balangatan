@@ -33,11 +33,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.TDDPOMSeleniumFramework.datautil.Common;
-import com.TDDPOMSeleniumFramework.datautil.Configuration;
 import com.TDDPOMSeleniumFramework.pages.BasePage;
-import com.TDDPOMSeleniumFramework.reporter.Log;
 
 public class Browser extends BasePage{
 	
@@ -105,12 +102,12 @@ public class Browser extends BasePage{
 	
 	public static void open(String url, String browser) {
 		driver.get(url);		
-		//funcLogTestStep(TEST_PASSED, "Open "+url+" with "+ browser +" browser");
+		logger.info("Successfully opened "+url+" with "+ browser +" browser.");
 	}
 	
 	public static String getPageTitle() {
 		String strPgeTitle = driver.getTitle();	
-		//funcLogTestStep(TEST_PASSED, "Page Title is" + strPgeTitle);
+		funcLogTestStep(TEST_PASSED, "Page Title is" + strPgeTitle);
 		return strPgeTitle;
 	}
 	
@@ -236,7 +233,7 @@ public class Browser extends BasePage{
 			try {
 				Browser.getDriver().switchTo().alert().accept();
 				i = false;
-				Log.testStep("PASSED", "Alert Accepted", "Alert Accepted");
+				//Log.testStep("PASSED", "Alert Accepted", "Alert Accepted");
 			} catch (Exception e) {
 				i = true;
 			}
@@ -244,7 +241,7 @@ public class Browser extends BasePage{
 		}
 		
 		if(i){
-			Log.testStep("FAILED", "Alert is not displayed", "Alert Accepted");
+			//Log.testStep("FAILED", "Alert is not displayed", "Alert Accepted");
 		}
 	}  
 	
@@ -257,7 +254,7 @@ public class Browser extends BasePage{
 			try {
 				Browser.getDriver().switchTo().alert().dismiss();
 				i = false;
-				Log.testStep("PASSED", "Alert dismissed", "Alert dismissed");
+				//Log.testStep("PASSED", "Alert dismissed", "Alert dismissed");
 			} catch (Exception e) {
 				i = true;
 			}
@@ -265,7 +262,7 @@ public class Browser extends BasePage{
 		}
 		
 		if(i){
-			Log.testStep("FAILED", "Alert is not displayed", "Alert dismissed");
+			//Log.testStep("FAILED", "Alert is not displayed", "Alert dismissed");
 		}
 	} 
 	
@@ -369,9 +366,9 @@ public class Browser extends BasePage{
 
 		boolean isCurrentUrlCorrect = getDriver().getCurrentUrl().contains(paramStrCurrentUrl);
 		if (isCurrentUrlCorrect) {
-			Log.testStep("PASSED", "Verify user successfully logged in", "Verify user successfully logged in");
+			//Log.testStep("PASSED", "Verify user successfully logged in", "Verify user successfully logged in");
 		} else {
-			Log.testStep("FAILED", "Current URL is "+ getDriver().getCurrentUrl(), "Current URL is "+ getDriver().getCurrentUrl());
+			//Log.testStep("FAILED", "Current URL is "+ getDriver().getCurrentUrl(), "Current URL is "+ getDriver().getCurrentUrl());
 			//Assert.assertTrue(isCurrentUrlCorrect, "Current URL is different "+ getDriver().getCurrentUrl());
 		}
 	}

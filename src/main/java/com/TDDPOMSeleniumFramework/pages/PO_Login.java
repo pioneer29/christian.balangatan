@@ -3,7 +3,6 @@ package com.TDDPOMSeleniumFramework.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.TDDPOMSeleniumFramework.pages.BasePage;
-import com.TDDPOMSeleniumFramework.reporter.Log;
 
 public class PO_Login extends BasePage {
 	
@@ -27,7 +26,7 @@ public class PO_Login extends BasePage {
 			funcClickElement("[Submit] button", BTN_SUBMIT, XPATH);
 			funcWaitTime(5);
 		} else {
-			Log.testStep(TEST_FAILED, errorDesc);
+			logger.info("[Username] textfield is NOT displayed");
 		}
 	}
 	
