@@ -9,7 +9,6 @@ import com.TDDPOMSeleniumFramework.webdriver.Browser;
 public class ActionsUtil {
 	
 	private static Actions builder = Browser.getAction();
-	//private static List<WebElement> listElements;
 	
 	public static void mouseOver(WebElement element){
 		

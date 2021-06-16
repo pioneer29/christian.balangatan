@@ -23,7 +23,7 @@ public class DateTimeFunction {
 	 * @param paramStrDayFormat
 	 *            string format for day/time
 	 * @return current day in string format
-	 * @author Mark.Salas
+	 * @author Christian Balangatan
 	 */
 
 	public static String getCurrentDateTime(String paramStrDayFormat) {

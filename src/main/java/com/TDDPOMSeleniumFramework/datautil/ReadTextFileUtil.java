@@ -6,7 +6,7 @@ import java.io.IOException;
 
 /**
  * 
- * @author mssalas
+ * @author Christian Balangatan
  *
  */
 

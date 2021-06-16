@@ -41,16 +41,10 @@ import com.TDDPOMSeleniumFramework.reporter.Log;
 
 public class Browser extends BasePage{
 	
-	public static String browser = Configuration.getValue("browser",
-			System.getProperty("user.dir").replace("\\", "/") + "/src/test/java/Data/persistentvariable.txt");
 	
 	public static Integer searchLoop = 30;
 	public static Actions action;
 	public static Properties prop = new Properties();
-
-	public static String getBrowser() {
-		return browser;
-	}
 	
 	public static Properties getProp() {
 		return prop;
@@ -109,11 +103,16 @@ public class Browser extends BasePage{
 
 	}
 	
-	public static void open(String url) {
+	public static void open(String url, String browser) {
 		driver.get(url);		
-		Log.testStep("PASSED", "Open "+url+" with "+ browser +" browser", "Open "+url+" with "+ browser +" browser");
+		//funcLogTestStep(TEST_PASSED, "Open "+url+" with "+ browser +" browser");
 	}
 	
+	public static String getPageTitle() {
+		String strPgeTitle = driver.getTitle();	
+		//funcLogTestStep(TEST_PASSED, "Page Title is" + strPgeTitle);
+		return strPgeTitle;
+	}
 	
 	public static void close(){
 		try {

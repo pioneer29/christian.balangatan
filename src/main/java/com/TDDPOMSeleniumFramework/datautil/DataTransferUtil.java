@@ -42,7 +42,7 @@ public final class DataTransferUtil {
 	 * @param paramStrVariableName
 	 *            string name of the variable as a reference with corresponding
 	 *            value<br>
-	 * @author Mark Salas<br>
+	 * @author Christian Balangatan<br>
 	 */
 
 	public static String getTextFromTheFile(String paramStrFileName, String paramStrVariableName) {
@@ -130,7 +130,7 @@ public final class DataTransferUtil {
 	 * This method will write the text to a textfile
 	 * </ul>
 	 * 
-	 * @author Mark.Salas
+	 * @author Christian Balangatan
 	 */
 
 	public static void writeToTextFile(String text, String paramStrFileName) {
