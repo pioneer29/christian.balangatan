@@ -16,6 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
 import com.TDDPOMSeleniumFramework.datautil.Common;
+import com.TDDPOMSeleniumFramework.datautil.DataRetriever;
 import com.TDDPOMSeleniumFramework.reporter.Screenshot;
 import com.TDDPOMSeleniumFramework.webdriver.Browser;
 import com.aventstack.extentreports.ExtentReports;
@@ -24,6 +25,10 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.codoid.products.exception.FilloException;
+import com.codoid.products.fillo.Connection;
+import com.codoid.products.fillo.Fillo;
+import com.codoid.products.fillo.Recordset;
 
 public class BasePage {
 	protected static final Logger logger = LogManager.getLogger(BasePage.class);
@@ -56,6 +61,10 @@ public class BasePage {
 	public static String exception_error = "";
 	
 	public static String screenshotName;
+	
+//	public static Fillo fillo;
+//	public static Connection connection;
+	
 	
 	/**
 	 * <h1>getBy</h1>
@@ -277,4 +286,105 @@ public class BasePage {
             logger.error("Unable to load logging property :", e);
         }
     }
+	
+
+//	public String getExecute (String DataTab, String ClassName) {
+//		String query = "SELECT * FROM \"" + DataTab + "\"" + " WHERE \"" + Common.CLASSNAME + "\" = '" + ClassName + "'";
+//		//String query = "SELECT * FROM \"" + DataTab + "\"";
+//		
+//		String execute = getTestData("", Common.EXECUTE, query);
+//		
+//		return execute;
+//		
+//	}
+//	
+//	public String getTestData (String table, String fields, String query) {
+//		String excelPath = Common.PATH_TESTDATA;
+//		
+//		if (!DataRetriever.readExcel(excelPath)) {
+//			logger.info("No Connection");
+//		}
+//		
+//		Recordset rs = DataRetriever.getSheetData(table, "", query);
+//		String testdata = null;
+//		
+//		try {
+//			while (rs.next()) {
+//				String fieldname = "" + fields + "";
+//				testdata = rs.getField(fieldname);
+//			}
+//		} catch (FilloException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		return testdata;
+//		
+//	}
+//	
+//	public String[] getTestDataArray (String table, String fields, String query) {
+//		String excelPath = Common.PATH_TESTDATA;
+//		
+//		if (!DataRetriever.readExcel(excelPath)) {
+//			logger.info("No Connection");
+//		}
+//		
+//		Recordset rs = DataRetriever.getSheetData(table, "", query);
+//		String testdata = null;
+//		String[] arrTestdata = null;
+//		
+//		try {
+//			while (rs.next()) {
+//				String fieldname = "" + fields + "";
+//				testdata = rs.getField(fieldname);
+//			}
+//		} catch (FilloException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		arrTestdata = testdata.split("\\|", -1);
+//		
+//		return arrTestdata;
+//		
+//	}
+//	public static boolean readExcel (String path) {
+//		boolean passed = true;
+//		fillo = new Fillo();
+//		connection = null;
+//		try {
+//			connection = fillo.getConnection(path);
+//		} catch (FilloException e) {
+//			errorDesc = e.getMessage() + "\n";
+//			passed = false;
+//		}
+//		
+//		return passed;
+//	}
+//	
+//	public static Recordset getSheetData (String sqlTable, String whereClause, String query) {
+//		Recordset rs = null;
+//		String queryValue = "";
+//		if (query.length() > 0){
+//			queryValue = query;
+//		} else {
+//			if (sqlTable.length() == 0) {
+//				errorDesc = "Table or Worksheet name not defined. \n";
+//			} else {
+//				queryValue = "SELECT * FROM \"" + sqlTable + "\"" + " " + whereClause;
+//			}
+//		}
+//		
+//		try {
+//			rs = connection.executeQuery(queryValue);
+//		} catch (FilloException e) {
+//			if(query.length() > 0 ) {
+//				errorDesc += "No records found for query " + query + ".\n";
+//			} else {
+//				errorDesc += "No records found for table/worksheet " + sqlTable + ".\n";
+//			}
+//			rs = null;
+//		}
+//		
+//		return rs;
+//		
+//	}
 }
