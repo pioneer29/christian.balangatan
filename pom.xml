@@ -7,6 +7,42 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>TDD POM Selenium Framework Project</name>
 
+	<profiles>
+		<profile>
+			<id>selenium-tests</id>
+
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.3</version>
+						<configuration>
+							<source>1.8</source>
+							<target>1.8</target>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.22.0</version>
+						<configuration>
+							<forkCount>0</forkCount>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/testsuites/${TestSuite}</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+
+		</profile>
+	</profiles>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
 	<dependencies>
 
 		<dependency>
@@ -20,7 +56,7 @@
 			<artifactId>poi</artifactId>
 			<version>3.11</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
@@ -32,13 +68,15 @@
 			<artifactId>poi-ooxml-schemas</artifactId>
 			<version>3.11</version>
 		</dependency>
-		
+
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
-			<scope>test</scope>
+			<version>7.4.0</version>
+			<scope>compile</scope>
 		</dependency>
+
 
 		<dependency>
 			<groupId>com.aventstack</groupId>
@@ -56,6 +94,19 @@
 			<groupId>com.codoid.products</groupId>
 			<artifactId>fillo</artifactId>
 			<version>1.18</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-clean-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-clean-plugin</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 
 	</dependencies>

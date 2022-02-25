@@ -24,22 +24,22 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Practice_Suite">
+            <a href="#" panel-name="suite-Practice_Suite" class="navigator-link">
               <span class="suite-name border-passed">Practice Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Practice_Suite">
+                  <a href="#" panel-name="test-xml-Practice_Suite" class="navigator-link ">
                     <span>C:\Users\chris\OneDrive\Documents\Shigoto\03 - Projects\01 - Selenium TDD POM\workspace\TDDPOMSeleniumFramework\src\test\resources\testsuites\testsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Practice_Suite">
+                  <a href="#" panel-name="testlist-Practice_Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Practice_Suite">
+                  <a href="#" panel-name="group-Practice_Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Practice_Suite">
+                  <a href="#" panel-name="times-Practice_Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Practice_Suite">
+                  <a href="#" panel-name="reporter-Practice_Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Practice_Suite">
+                  <a href="#" panel-name="ignored-methods-Practice_Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Practice_Suite">
+                  <a href="#" panel-name="chronological-Practice_Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -103,13 +103,13 @@
                     </span>
                     <div class="method-list-content passed suite-Practice_Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Practice_Suite" title="com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1" hash-for-method="SmokeTests_NewTours_Module1_TC1">SmokeTests_NewTours_Module1_TC1</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Practice_Suite" title="com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test" class="method navigator-link" hash-for-method="SmokeTests_NewTours_Module1_TC1">SmokeTests_NewTours_Module1_TC1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Practice_Suite" title="com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1" hash-for-method="SmokeTests_NewTours_Module1_TC2">SmokeTests_NewTours_Module1_TC2</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Practice_Suite" title="com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test" class="method navigator-link" hash-for-method="SmokeTests_NewTours_Module1_TC2">SmokeTests_NewTours_Module1_TC2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Practice_Suite -->
@@ -127,7 +127,7 @@
           <div class="suite-Practice_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1</span>
+              <span class="class-name">com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -155,11 +155,11 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Practice Suite&quot;&gt;
+&lt;suite name=&quot;Practice Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test Basics 1&quot;&gt;
     &lt;parameter name=&quot;browser_name&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1&quot;/&gt;
+      &lt;class name=&quot;com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test Basics 1 --&gt;
 &lt;/suite&gt; &lt;!-- Practice Suite --&gt;
@@ -202,17 +202,17 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'SmokeTests_NewTours_Module1_TC1')
-data.setCell(0, 2, 'com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1')
-data.setCell(0, 3, 214);
+data.setCell(0, 2, 'com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test')
+data.setCell(0, 3, 431);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'SmokeTests_NewTours_Module1_TC2')
-data.setCell(1, 2, 'com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1')
-data.setCell(1, 3, 39);
+data.setCell(1, 2, 'com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test')
+data.setCell(1, 3, 251);
 window.suiteTableData['Practice_Suite']= { tableData: data, tableDiv: 'times-div-Practice_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 253 ms</span>
+              <span class="suite-total-time">Total running time: 682 ms</span>
               <div id="times-div-Practice_Suite">
               </div> <!-- times-div-Practice_Suite -->
             </div> <!-- times-div -->
@@ -238,38 +238,38 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">BeforeClass(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">BeforeMethod(public void com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1.SmokeTests_NewTours_Module...)</span>
-                <span class="method-start">17188 ms</span>
+                <span class="method-name">BeforeMethod(public void com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test.SmokeTests_NewTours_Mo...)</span>
+                <span class="method-start">32343 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">SmokeTests_NewTours_Module1_TC1</span>
-                <span class="method-start">17190 ms</span>
+                <span class="method-start">32348 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">AfterMethod([TestResult name=SmokeTests_NewTours_Module1_TC1 status=SUCCESS method=SmokeTests_NewTours_Module1.S...)</span>
-                <span class="method-start">17406 ms</span>
+                <span class="method-name">AfterMethod([TestResult name=SmokeTests_NewTours_Module1_TC1 status=SUCCESS method=SmokeTests_NewTours_Module1Te...)</span>
+                <span class="method-start">32781 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">SmokeTests_NewTours_Module1_TC2</span>
-                <span class="method-start">17409 ms</span>
+                <span class="method-start">32787 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">BeforeMethod(public void com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1.SmokeTests_NewTours_Module...)</span>
-                <span class="method-start">17409 ms</span>
+                <span class="method-name">BeforeMethod(public void com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test.SmokeTests_NewTours_Mo...)</span>
+                <span class="method-start">32787 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
-                <span class="method-name">AfterMethod([TestResult name=SmokeTests_NewTours_Module1_TC2 status=SUCCESS method=SmokeTests_NewTours_Module1.S...)</span>
-                <span class="method-start">17448 ms</span>
+                <span class="method-name">AfterMethod([TestResult name=SmokeTests_NewTours_Module1_TC2 status=SUCCESS method=SmokeTests_NewTours_Module1Te...)</span>
+                <span class="method-start">33040 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">AfterClass</span>
-                <span class="method-start">17449 ms</span>
+                <span class="method-start">33041 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

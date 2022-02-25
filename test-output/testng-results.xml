@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Practice Suite" duration-ms="19578" started-at="2021-06-17T01:38:36 CST" finished-at="2021-06-17T01:38:56 CST">
+  <suite started-at="2022-02-25T09:28:55 CST" name="Practice Suite" finished-at="2022-02-25T09:29:31 CST" duration-ms="35455">
     <groups>
     </groups>
-    <test name="Test Basics 1" duration-ms="19578" started-at="2021-06-17T01:38:36 CST" finished-at="2021-06-17T01:38:56 CST">
-      <class name="com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1">
-        <test-method status="PASS" signature="BeforeClass(java.lang.String)[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1@f0f1be]" name="BeforeClass" is-config="true" duration-ms="17181" started-at="2021-06-17T01:38:36 CST" finished-at="2021-06-17T01:38:53 CST">
+    <test started-at="2022-02-25T09:28:55 CST" name="Test Basics 1" finished-at="2022-02-25T09:29:31 CST" duration-ms="35455">
+      <class name="com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test">
+        <test-method is-config="true" signature="BeforeClass(java.lang.String)[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test@6f43c82]" started-at="2022-02-25T09:28:55 CST" name="BeforeClass" finished-at="2022-02-25T09:29:28 CST" duration-ms="32323" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,63 +18,63 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1@f0f1be]" name="BeforeMethod" is-config="true" duration-ms="2" started-at="2021-06-17T01:38:53 CST" finished-at="2021-06-17T01:38:53 CST">
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test@6f43c82]" started-at="2022-02-25T09:29:28 CST" name="BeforeMethod" finished-at="2022-02-25T09:29:28 CST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1.SmokeTests_NewTours_Module1_TC1()]]>
+                <![CDATA[public void com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test.SmokeTests_NewTours_Module1_TC1()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="SmokeTests_NewTours_Module1_TC1()[pri:1, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1@f0f1be]" name="SmokeTests_NewTours_Module1_TC1" duration-ms="214" started-at="2021-06-17T01:38:53 CST" finished-at="2021-06-17T01:38:54 CST">
+        <test-method signature="SmokeTests_NewTours_Module1_TC1()[pri:1, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test@6f43c82]" started-at="2022-02-25T09:29:28 CST" name="SmokeTests_NewTours_Module1_TC1" finished-at="2022-02-25T09:29:28 CST" duration-ms="431" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SmokeTests_NewTours_Module1_TC1 -->
-        <test-method status="PASS" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1@f0f1be]" name="AfterMethod" is-config="true" duration-ms="2" started-at="2021-06-17T01:38:54 CST" finished-at="2021-06-17T01:38:54 CST">
+        <test-method is-config="true" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test@6f43c82]" started-at="2022-02-25T09:29:28 CST" name="AfterMethod" finished-at="2022-02-25T09:29:28 CST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SmokeTests_NewTours_Module1_TC1 status=SUCCESS method=SmokeTests_NewTours_Module1.SmokeTests_NewTours_Module1_TC1()[pri:1, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1@f0f1be] output={null}]]]>
+                <![CDATA[[TestResult name=SmokeTests_NewTours_Module1_TC1 status=SUCCESS method=SmokeTests_NewTours_Module1Test.SmokeTests_NewTours_Module1_TC1()[pri:1, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test@6f43c82] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method status="PASS" signature="SmokeTests_NewTours_Module1_TC2()[pri:2, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1@f0f1be]" name="SmokeTests_NewTours_Module1_TC2" duration-ms="39" started-at="2021-06-17T01:38:54 CST" finished-at="2021-06-17T01:38:54 CST">
+        <test-method signature="SmokeTests_NewTours_Module1_TC2()[pri:2, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test@6f43c82]" started-at="2022-02-25T09:29:28 CST" name="SmokeTests_NewTours_Module1_TC2" finished-at="2022-02-25T09:29:28 CST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SmokeTests_NewTours_Module1_TC2 -->
-        <test-method status="PASS" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1@f0f1be]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2021-06-17T01:38:54 CST" finished-at="2021-06-17T01:38:54 CST">
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test@6f43c82]" started-at="2022-02-25T09:29:28 CST" name="BeforeMethod" finished-at="2022-02-25T09:29:28 CST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1.SmokeTests_NewTours_Module1_TC2()]]>
+                <![CDATA[public void com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test.SmokeTests_NewTours_Module1_TC2()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1@f0f1be]" name="AfterMethod" is-config="true" duration-ms="1" started-at="2021-06-17T01:38:54 CST" finished-at="2021-06-17T01:38:54 CST">
+        <test-method is-config="true" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test@6f43c82]" started-at="2022-02-25T09:29:28 CST" name="AfterMethod" finished-at="2022-02-25T09:29:28 CST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SmokeTests_NewTours_Module1_TC2 status=SUCCESS method=SmokeTests_NewTours_Module1.SmokeTests_NewTours_Module1_TC2()[pri:2, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1@f0f1be] output={null}]]]>
+                <![CDATA[[TestResult name=SmokeTests_NewTours_Module1_TC2 status=SUCCESS method=SmokeTests_NewTours_Module1Test.SmokeTests_NewTours_Module1_TC2()[pri:2, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test@6f43c82] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1@f0f1be]" name="AfterClass" is-config="true" duration-ms="2116" started-at="2021-06-17T01:38:54 CST" finished-at="2021-06-17T01:38:56 CST">
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test@6f43c82]" started-at="2022-02-25T09:29:28 CST" name="AfterClass" finished-at="2022-02-25T09:29:31 CST" duration-ms="2397" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-      </class> <!-- com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1 -->
+      </class> <!-- com.TDDPOMSeleniumFramework.tests.SmokeTests_NewTours_Module1Test -->
     </test> <!-- Test Basics 1 -->
   </suite> <!-- Practice Suite -->
 </testng-results>

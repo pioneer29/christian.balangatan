@@ -1,10 +1,16 @@
 package com.TDDPOMSeleniumFramework.tests;
 
 import java.lang.reflect.Method;
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import com.TDDPOMSeleniumFramework.datautil.Common;
 import com.TDDPOMSeleniumFramework.datautil.DataRetriever;
@@ -14,8 +20,6 @@ import com.TDDPOMSeleniumFramework.webdriver.Browser;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.codoid.products.exception.FilloException;
-import com.codoid.products.fillo.Recordset;
 
 
 public class BaseTest extends BasePage {
@@ -25,7 +29,7 @@ public class BaseTest extends BasePage {
 
 	@Parameters({ "browser_name" })
 	@BeforeClass
-	public void BeforeClass(String strBrowserName) throws Exception {
+	public void BeforeClass( @Optional("browser_name")String strBrowserName) throws Exception {
 		
 		initializeLogger();
 		
