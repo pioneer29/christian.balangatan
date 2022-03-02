@@ -9,6 +9,11 @@ Tools used:
 
 Main test is located in: src/test/java/com/JupiterToys_POMSeleniumFramework/tests/Tests_JupiterToys_Module1Test.java
 
+Element locators and methods are located in src/main/java/com/JupiterToys_POMSeleniumFramework/pages:
+- PO_Home.java - Locators and methods for the Home page
+- PO_Contact.java - Locators and methods for the Contact page
+- PO_Shop.java - Locators and methods for the Shop page
+
 There are 2 options on How to run the test suite (src/test/resources/testsuite.xml:
 
 1st Option:
