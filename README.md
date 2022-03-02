@@ -17,7 +17,9 @@ There are 2 options on How to run the test suite (src/test/resources/testsuite.x
 - From command prompt, go to the home directory of the project
 - run this command: mvn install test -D TestSuite=testsuite.xml
 
-*Extent Test Result is located in /reports
+*Extent Report Test Result is located in /reports
 *There are 2 extent reports on the folder:
 1. TestNG-JupiterToys_SeleniumFramework-Report_020322083353.html - result with failed test case (intentionally Failed the testcase just to check if validation for the expected quantity of the ordered item is working)
 2. TestNG-JupiterToys_SeleniumFramework-Report_020322083531.html - result with all test cases passed
+
+Test Data file is located in: src/test/resources/data/JupiterToys_DATA.xlsx
