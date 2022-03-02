@@ -1,5 +1,7 @@
 # christian.balangatan POM/Selenium Framework for Jupiter Toys web application
 
+This project is based on the POM/Selenium Framework template that I have developed from the past.
+
 Tools used:
 - Eclipse 2021-03 (4.19.0)
 - Maven: Apache Maven 3.8.1
