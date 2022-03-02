@@ -51,6 +51,18 @@ public class PO_Contact extends BasePage {
 	@FindBy(xpath = LBL_MESSAGE_ERROR_MESSAGE)
 	public WebElement lblMessageErrorMessage;
 
+	/**
+	 * <h1>funcPopulateContactPageFields</h1>
+	 * <ul>
+	 * This method populates data in Contact Page Fields
+	 * </ul>
+	 * @param strForename 
+	 * @param strSurname
+	 * @param strEmail
+	 * @param strTelephone
+	 * @param strMessage
+	 * @return result - returns true or false
+	 **/
 	public boolean funcPopulateContactPageFields(String strForename, String strSurname, String strEmail,
 			String strTelephone, String strMessage) {
 
@@ -106,6 +118,14 @@ public class PO_Contact extends BasePage {
 
 	}
 	
+	/**
+	 * <h1>funcClickSubmit</h1>
+	 * <ul>
+	 * This method clicks Submit button
+	 * </ul>
+	 * @param none
+	 * @return result - returns true or false
+	 **/
 	public boolean funcClickSubmit() {
 		
 		// Initialize result boolean value:
@@ -120,6 +140,14 @@ public class PO_Contact extends BasePage {
 		return result;
 	}
 
+	/**
+	 * <h1>funcValidateErrorsForRequiredFieldsExist</h1>
+	 * <ul>
+	 * This method validates errors on required fields
+	 * </ul>
+	 * @param none
+	 * @return result - returns true or false
+	 **/
 	public boolean funcValidateErrorsForRequiredFieldsExist() {
 
 		// Initialize result boolean value:
@@ -156,6 +184,14 @@ public class PO_Contact extends BasePage {
 
 	}
 	
+	/**
+	 * <h1>funcValidateErrorsForInvalidData</h1>
+	 * <ul>
+	 * This method validates errors on required fields with invalid data
+	 * </ul>
+	 * @param none
+	 * @return result - returns true or false
+	 **/
 	public boolean funcValidateErrorsForInvalidData() {
 
 		// Initialize result boolean value:
@@ -192,6 +228,14 @@ public class PO_Contact extends BasePage {
 
 	}
 	
+	/**
+	 * <h1>funcValidateErrorsForRequiredFieldsNotDisplayed</h1>
+	 * <ul>
+	 * This method validates errors on required fields are not displayed
+	 * </ul>
+	 * @param none
+	 * @return result - returns true or false
+	 **/
 	public boolean funcValidateErrorsForRequiredFieldsNotDisplayed() {
 
 		// Initialize result boolean value:
@@ -219,6 +263,14 @@ public class PO_Contact extends BasePage {
 
 	}
 	
+	/**
+	 * <h1>funcValidateSuccessfulSubmissionMessage</h1>
+	 * <ul>
+	 * This method validates successful submission message
+	 * </ul>
+	 * @param strExpectedMessage - expected message
+	 * @return result - returns true or false
+	 **/
 	public boolean funcValidateSuccessfulSubmissionMessage(String strExpectedMessage) {
 
 		// Initialize result boolean value:
@@ -236,6 +288,16 @@ public class PO_Contact extends BasePage {
 
 	}
 	
+	/**
+	 * <h1>funcValidateText</h1>
+	 * <ul>
+	 * This method validates text on element
+	 * </ul>
+	 * @param strElementName - element name
+	 * @param strLocator - element locator
+	 * @param strExpectedText - expected text value
+	 * @return result - returns true or false
+	 **/
 	private static boolean funcValidateText(String strElementName, String strLocator, String strExpectedText)
 	{
 		

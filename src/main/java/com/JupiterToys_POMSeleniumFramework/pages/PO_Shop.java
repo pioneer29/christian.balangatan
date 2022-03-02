@@ -22,36 +22,60 @@ public class PO_Shop extends BasePage {
 	@FindBy(xpath = TBL_CART_TABLE)
 	public WebElement tblCartTable;
 
-	public boolean funcClickBuy(String strShopItem) {
+	
+	/**
+	 * <h1>funcClickBuy</h1>
+	 * <ul>
+	 * This method clicks the Buy button of each item in Shop page
+	 * </ul>
+	 * @param strShopItem - item to buy
+	 * @param intQuantity - quantity of item to buy
+	 * @return result - returns true or false
+	 **/
+	public boolean funcClickBuy(String strShopItem, int intQuantity) {
 
 		// Initialize result boolean value:
 		result = true;
+		
+		for(int i = 1; i <= intQuantity; i++) {
+			switch (strShopItem.toUpperCase()) {
+			case "FUNNY COW":
+				if (isElementDisplayed("[Buy Funny Cow] button", BTN_BUY_FUNNYCOW, XPATH)) {
+					funcClickElement("[Buy Funny Cow] button", BTN_BUY_FUNNYCOW, XPATH);
+				} else {
+					result = false;
+				}
+				break;
 
-		switch (strShopItem.toUpperCase()) {
-		case "FUNNY COW":
-			if (isElementDisplayed("[Buy Funny Cow] button", BTN_BUY_FUNNYCOW, XPATH)) {
-				funcClickElement("[Buy Funny Cow] button", BTN_BUY_FUNNYCOW, XPATH);
-			} else {
+			case "FLUFFY BUNNY":
+				if (isElementDisplayed("[Buy Fluffy Bunny] button", BTN_BUY_FLUFFYBUNNY, XPATH)) {
+					funcClickElement("[Buy Fluffy Bunny] button", BTN_BUY_FLUFFYBUNNY, XPATH);
+				} else {
+					result = false;
+				}
+				break;
+
+			default:
+				logger.info("[" + strShopItem + "] item is INVALID");
 				result = false;
 			}
-			break;
-
-		case "FLUFFY BUNNY":
-			if (isElementDisplayed("[Buy Fluffy Bunny] button", BTN_BUY_FLUFFYBUNNY, XPATH)) {
-				funcClickElement("[Buy Fluffy Bunny] button", BTN_BUY_FLUFFYBUNNY, XPATH);
-			} else {
-				result = false;
-			}
-			break;
-
-		default:
-			logger.info("[" + strShopItem + "] item is INVALID");
-			result = false;
 		}
+		
 
 		return result;
 	}
 
+	/**
+	 * <h1>funcValiateCartTable</h1>
+	 * <ul>
+	 * This method validates the quantity ordered for each bought item
+	 * </ul>
+	 * @param strColumnReference - reference column
+	 * @param strRowValueReference - reference value of reference column
+	 * @param strColumnoGetData - column where to get the data
+	 * @param strExpectedQuantity - expected quantity
+	 * @return result - returns true or false
+	 **/
 	public boolean funcValiateCartTable(String strColumnReference, String strRowValueReference, String strColumnoGetData,
 			String strExpectedQuantity) {
 		// Initialize result boolean value:
@@ -70,7 +94,6 @@ public class PO_Shop extends BasePage {
 		 int intRefRowIndex = funcGetRowIndexFromTable(intRefColIndex, strRowValueReference, TBL_CART_TABLE);
 		 
 		// Get the Column Index of the Column to get the data
-		 //int intColumnToGetDataIndex = funcGetColumnIndexFromTable(strColumnoGetData, TBL_CART_TABLE);
 		 int intColumnToGetDataIndex = funcGetColumnIndexFromTable(strColumnoGetData, TBL_CART_TABLE);
 			 
 		 //String strRetValue =  driver.findElement(By.xpath("(" + TBL_CART_TABLE + "//tr[@class='cart-item ng-scope']//td["+intColumnToGetDataIndex+"])["+intRefRowIndex+"]//input")).getText();
@@ -86,6 +109,15 @@ public class PO_Shop extends BasePage {
 		return result;
 	}
 
+	/**
+	 * <h1>funcGetColumnIndexFromTable</h1>
+	 * <ul>
+	 * This method gets the column index given a column name in a table
+	 * </ul>
+	 * @param strColumnName - column name
+	 * @param strTableXpath - xpath of the table element
+	 * @return indexOfColumn - index of the row
+	 **/
 	private static int funcGetColumnIndexFromTable(String strColumnName, String strTableXpath) {
 		List<WebElement> col = driver.findElements(By.xpath(strTableXpath + "//tr//th"));
 
@@ -95,7 +127,6 @@ public class PO_Shop extends BasePage {
 		for (int i = 1; i <= intTableColumnSize; i++) {
 
 			if (driver.findElement(By.xpath(strTableXpath + "//tr//th[" + i + "]")).getText().equalsIgnoreCase(strColumnName)) {
-			//if (driver.findElement(By.xpath("(" + strTableXpath + "//tr[@class='cart-item ng-scope']//td["+strColumnName+"])["+ i +"]")).getText().equalsIgnoreCase(strColumnName)) {
 				indexOfColumn = i;
 				break;
 
@@ -107,6 +138,16 @@ public class PO_Shop extends BasePage {
 
 	}
 	
+	/**
+	 * <h1>funcGetRowIndexFromTable</h1>
+	 * <ul>
+	 * This method gets the row index given a column name reference and row reference value in a table
+	 * </ul>
+	 * @param intRefColIndex - reference column name index
+	 * @param strRefRowValue - reference row value
+	 * @param strTableXpath - xpath of the table element
+	 * @return indexOfRow - index of the row value
+	 **/
 	private static int funcGetRowIndexFromTable(int intRefColIndex, String strRefRowValue, String strTableXpath) {
 		List<WebElement> col = driver.findElements(By.xpath(strTableXpath + "//tr//th"));
 

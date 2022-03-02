@@ -1,39 +1,19 @@
 package com.JupiterToys_POMSeleniumFramework.webdriver;
 
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
+import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.security.UserAndPassword;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import com.JupiterToys_POMSeleniumFramework.datautil.Common;
 import com.JupiterToys_POMSeleniumFramework.pages.BasePage;
@@ -44,6 +24,14 @@ public class Browser extends BasePage{
 		return driver;
 	}
 	
+	/**
+	 * <h1>funcInitializeBrowser</h1>
+	 * <ul>
+	 * This method initialize the web driver
+	 * </ul>
+	 * @param strBrowserName - IE, FIREFOX, CHROME (default)
+	 * @return webdriver
+	 **/
 	public static void funcInitializeBrowser(String strBrowserName){
 		
 		if(strBrowserName.contentEquals("IE")){
@@ -58,14 +46,14 @@ public class Browser extends BasePage{
             ieCapabilities.setCapability("javascriptEnabled", true);
             ieCapabilities.setCapability(CapabilityType.SUPPORTS_FINDING_BY_CSS, true);
 			driver = new InternetExplorerDriver(ieCapabilities);
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+			driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS) ;
 			
 		} else if(strBrowserName.contentEquals("FIREFOX")){
 			FirefoxProfile profile = new FirefoxProfile(); 
 			profile.setPreference("browser.download.dir", Common.PATH_DOWNLOADS); 
 			profile.setPreference("browser.download.folderList", 2);
 			driver = new FirefoxDriver(profile);
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+			driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS) ;
 		}else{
 			System.setProperty("webdriver.chrome.driver", Common.PATH_WEBDRIVERS + "chromedriver.exe");
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
@@ -79,23 +67,48 @@ public class Browser extends BasePage{
 			cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 			cap.setCapability(ChromeOptions.CAPABILITY, options);
 			driver = new ChromeDriver(cap);
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+			driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS) ;
 			
 		}
 
 	}
 	
+	/**
+	 * <h1>open</h1>
+	 * <ul>
+	 * This method opens the URL
+	 * </ul>
+	 * @param url
+	 * @param browser
+	 * @return strPgeTitle - page title text
+	 **/
 	public static void open(String url, String browser) {
 		driver.get(url);		
 		logger.info("Successfully opened "+url+" with "+ browser +" browser.");
 	}
 	
+	/**
+	 * <h1>getPageTitle</h1>
+	 * <ul>
+	 * This method gets the page title text
+	 * </ul>
+	 * @param none
+	 * @return strPgeTitle - page title text
+	 **/
 	public static String getPageTitle() {
 		String strPgeTitle = driver.getTitle();	
 		funcLogTest(TEST_PASSED, "Page Title is" + strPgeTitle);
 		return strPgeTitle;
 	}
 	
+	/**
+	 * <h1>close</h1>
+	 * <ul>
+	 * This method closes the web driver
+	 * </ul>
+	 * @param none
+	 * @return none
+	 **/
 	public static void close(){
 		try {
 			driver.close();

@@ -35,7 +35,14 @@ public class PO_Home extends BasePage {
 	@FindBy (xpath = LNK_CART)
 	public WebElement lnkCart;
 	
-	
+	/**
+	 * <h1>funcLogin</h1>
+	 * <ul>
+	 * This method is used to login in the application
+	 * </ul>
+	 * @param strUserName
+	 * @param strPassword
+	 **/
 	public static void funcLogin(String strUserName, String strPassword) {
 		if (isElementDisplayed("[Username] textfield", TXT_USERNAME, XPATH)) {
 			funcSetTextElement("[Username] textfield", TXT_USERNAME, strUserName, XPATH);
@@ -46,7 +53,15 @@ public class PO_Home extends BasePage {
 			logger.info("[Username] textfield is NOT displayed");
 		}
 	}
-		
+	
+	/**
+	 * <h1>funcNavigate</h1>
+	 * <ul>
+	 * This method navigates on menu header
+	 * </ul>
+	 * @param strPageName - Page name to navigate in menu header
+	 * @return result - returns true or false
+	 **/
 	public boolean funcNavigate(String strPageName) {
 		
 		// Initialize result boolean value:

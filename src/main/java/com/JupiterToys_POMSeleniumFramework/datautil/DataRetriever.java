@@ -16,7 +16,18 @@ import com.JupiterToys_POMSeleniumFramework.pages.BasePage;
 public class DataRetriever extends BasePage {
 
 
-
+	/**
+	 * <h1>funcGetDataFromExcel</h1>
+	 * <ul>
+	 * This method gets data on the excel data file
+	 * </ul>
+	 * @param fileName - excel file name
+	 * @param sheetName - excel sheet name
+	 * @param refColumn - reference column
+	 * @param refRowValue - reference value of reference column
+	 * @param refColToGetValue - column where to get the data
+	 * @return actual data from excel
+	 **/
 	public static String funcGetDataFromExcel(String fileName, String sheetName, String refColumn, String refRowValue, String refColToGetValue) throws Exception {
 
 		// Create an object of File class to open xlsx file

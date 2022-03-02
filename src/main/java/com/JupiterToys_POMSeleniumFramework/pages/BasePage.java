@@ -66,11 +66,7 @@ public class BasePage {
 	public static String exception_error = "";
 	
 	public static String screenshotName;
-	
-//	public static Fillo fillo;
-//	public static Connection connection;
-	
-	
+
 	/**
 	 * <h1>getBy</h1>
 	 * <ul>
@@ -271,6 +267,15 @@ public class BasePage {
 		logger.info("Completed creating extent report: " + reportName);
 	}
 
+	/**
+	 * <h1>funcLogTest</h1>
+	 * <ul>
+	 * This method logs test details and status in Extent Report
+	 * </ul>
+	 * @param tag - PASSED, FAILED, INFO, WARNING, SKIP
+	 * @param Actual - actual result message
+	 * @return none
+	 **/
 	public static void funcLogTest(String tag, String Actual) {
 
 		SoftAssert soft = new SoftAssert();
@@ -310,6 +315,15 @@ public class BasePage {
 	}
 	
 	
+	/**
+	 * <h1>funcReportTestCaseStatus</h1>
+	 * <ul>
+	 * This method set the test case status
+	 * </ul>
+	 * @param testCaseName
+	 * @param blnStatus
+	 * @return none
+	 **/
 	public static void funcReportTestCaseStatus(String testCaseName, boolean blnStatus) {
 		
 		if(blnStatus) {
@@ -324,6 +338,14 @@ public class BasePage {
 		
 	}
 	
+	/**
+	 * <h1>initializeLogger</h1>
+	 * <ul>
+	 * This method initializes the logger
+	 * </ul>
+	 * @param none
+	 * @return none
+	 **/
 	protected void initializeLogger() {
         Properties logProperties = new Properties();
  

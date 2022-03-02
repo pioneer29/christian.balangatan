@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-02T02:41:13 CST" name="Suite" finished-at="2022-03-02T02:41:25 CST" duration-ms="12298">
+  <suite started-at="2022-03-02T08:35:29 CST" name="Suite" finished-at="2022-03-02T08:36:11 CST" duration-ms="41805">
     <groups>
     </groups>
-    <test started-at="2022-03-02T02:41:13 CST" name="Test" finished-at="2022-03-02T02:41:25 CST" duration-ms="12298">
+    <test started-at="2022-03-02T08:35:29 CST" name="Test" finished-at="2022-03-02T08:36:11 CST" duration-ms="41805">
       <class name="com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test">
-        <test-method is-config="true" signature="BeforeClass(java.lang.String)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@7d3e8655]" started-at="2022-03-02T02:41:13 CST" name="BeforeClass" finished-at="2022-03-02T02:41:23 CST" duration-ms="9630" status="PASS">
+        <test-method is-config="true" signature="BeforeClass(java.lang.String)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:35:29 CST" name="BeforeClass" finished-at="2022-03-02T08:35:40 CST" duration-ms="10822" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,85 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@7d3e8655]" started-at="2022-03-02T02:41:23 CST" name="BeforeMethod" finished-at="2022-03-02T02:41:23 CST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:35:40 CST" name="BeforeMethod" finished-at="2022-03-02T08:35:40 CST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test.Tests_JupiterToys_Module1_TC1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Tests_JupiterToys_Module1_TC1()[pri:1, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:35:40 CST" name="Tests_JupiterToys_Module1_TC1" finished-at="2022-03-02T08:35:56 CST" duration-ms="16408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tests_JupiterToys_Module1_TC1 -->
+        <test-method is-config="true" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:35:56 CST" name="AfterMethod" finished-at="2022-03-02T08:35:56 CST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Tests_JupiterToys_Module1_TC1 status=SUCCESS method=Tests_JupiterToys_Module1Test.Tests_JupiterToys_Module1_TC1()[pri:1, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:35:56 CST" name="BeforeMethod" finished-at="2022-03-02T08:35:56 CST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test.Tests_JupiterToys_Module1_TC2()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Tests_JupiterToys_Module1_TC2()[pri:2, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:35:56 CST" name="Tests_JupiterToys_Module1_TC2" finished-at="2022-03-02T08:36:06 CST" duration-ms="9867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tests_JupiterToys_Module1_TC2 -->
+        <test-method is-config="true" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:36:06 CST" name="AfterMethod" finished-at="2022-03-02T08:36:06 CST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Tests_JupiterToys_Module1_TC2 status=SUCCESS method=Tests_JupiterToys_Module1Test.Tests_JupiterToys_Module1_TC2()[pri:2, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method signature="Tests_JupiterToys_Module1_TC3()[pri:3, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:36:06 CST" name="Tests_JupiterToys_Module1_TC3" finished-at="2022-03-02T08:36:07 CST" duration-ms="861" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tests_JupiterToys_Module1_TC3 -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:36:06 CST" name="BeforeMethod" finished-at="2022-03-02T08:36:06 CST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test.Tests_JupiterToys_Module1_TC3()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method is-config="true" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:36:07 CST" name="AfterMethod" finished-at="2022-03-02T08:36:07 CST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Tests_JupiterToys_Module1_TC3 status=SUCCESS method=Tests_JupiterToys_Module1Test.Tests_JupiterToys_Module1_TC3()[pri:3, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:36:07 CST" name="BeforeMethod" finished-at="2022-03-02T08:36:07 CST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,22 +107,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Tests_JupiterToys_Module1_TC4()[pri:4, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@7d3e8655]" started-at="2022-03-02T02:41:23 CST" name="Tests_JupiterToys_Module1_TC4" finished-at="2022-03-02T02:41:24 CST" duration-ms="1438" status="PASS">
+        <test-method signature="Tests_JupiterToys_Module1_TC4()[pri:4, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:36:07 CST" name="Tests_JupiterToys_Module1_TC4" finished-at="2022-03-02T08:36:09 CST" duration-ms="2385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tests_JupiterToys_Module1_TC4 -->
-        <test-method is-config="true" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@7d3e8655]" started-at="2022-03-02T02:41:24 CST" name="AfterMethod" finished-at="2022-03-02T02:41:24 CST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:36:09 CST" name="AfterMethod" finished-at="2022-03-02T08:36:09 CST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Tests_JupiterToys_Module1_TC4 status=SUCCESS method=Tests_JupiterToys_Module1Test.Tests_JupiterToys_Module1_TC4()[pri:4, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@7d3e8655] output={null}]]]>
+                <![CDATA[[TestResult name=Tests_JupiterToys_Module1_TC4 status=SUCCESS method=Tests_JupiterToys_Module1Test.Tests_JupiterToys_Module1_TC4()[pri:4, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@7d3e8655]" started-at="2022-03-02T02:41:24 CST" name="AfterClass" finished-at="2022-03-02T02:41:25 CST" duration-ms="1196" status="PASS">
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:com.JupiterToys_POMSeleniumFramework.tests.Tests_JupiterToys_Module1Test@169bb4dd]" started-at="2022-03-02T08:36:09 CST" name="AfterClass" finished-at="2022-03-02T08:36:11 CST" duration-ms="1420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
